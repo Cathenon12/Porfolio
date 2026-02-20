@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Portfolio<span class="highlight">.</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Photo de profil" class="profile-photo">
+            </div>
+            <h1 class="animate-fade-in">Bonjour, je suis <span class="highlight">votre nom</span></h1>
+            <p class="animate-fade-in-delay">Rédacteur Web | Assistant Virtuel | Service Client | Développeur Web</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Me contacter</a>
+                <a href="#experience" class="btn btn-secondary">Voir mes expériences</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Passionné par le web et la communication, je suis un professionnel polyvalent avec une expertise dans plusieurs domaines :</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-pen"></i> <strong>Rédacteur Web</strong> - Création de contenus optimisés SEO</li>
+                        <li><i class="fas fa-headset"></i> <strong>Assistant Virtuel</strong> - Gestion administrative et support</li>
+                        <li><i class="fas fa-user-headset"></i> <strong>Service Client</strong> - Relation client de qualité</li>
+                        <li><i class="fas fa-code"></i> <strong>Développement Web</strong> - HTML, CSS, JavaScript</li>
+                    </ul>
+                    <p class="about-description">
+                        Fort de mon expérience dans ces différents domaines, je suis capable de m'adapter à diverses missions 
+                        et de fournir un travail de qualité. Mon parcours m'a permis de développer des compétences en communication, 
+                        en gestion de projet et en résolution de problèmes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3>Rédacteur Web</h3>
+                    <ul class="skill-list">
+                        <li>Rédaction SEO</li>
+                        <li>Copywriting</li>
+                        <li>Création de contenu</li>
+                        <li>Optimisation moteur de recherche</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h3>Assistant Virtuel</h3>
+                    <ul class="skill-list">
+                        <li>Gestion d'agenda</li>
+                        <li>Support administratif</li>
+                        <li>Gestion d'emails</li>
+                        <li>Recherche documentaire</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Service Client</h3>
+                    <ul class="skill-list">
+                        <li>Support client</li>
+                        <li>Gestion des réclamations</li>
+                        <li>Communication orale</li>
+                        <li>Résolution de conflits</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Développement Web</h3>
+                    <ul class="skill-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <!-- Projet 1: Gestion de rendez-vous médicale -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Gestion de Rendez-vous Médicale</h3>
+                    <p class="project-description">Application de gestion des rendez-vous médicaux avec planification, rappels et suivi des patients.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Projet 2: Gestion de stock magasiniere -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Gestion de Stock Magasinier</h3>
+                    <p class="project-description">Système de gestion d'inventaire avec suivi des entrées/sorties, alertes de stock et rapports.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Projet 3: Application meteo -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>Application Météo</h3>
+                    <p class="project-description">Application de prévision météo en temps réel avec recherche par ville et graphiques.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Projet 4: Calculatrice -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculatrice</h3>
+                    <p class="project-description">Calculatrice interactive avec opérations de base, fonctions scientifiques et historique.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Projet 5: Gestion de tache -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gestion de Tâches</h3>
+                    <p class="project-description">Application de gestion de tâches avec création, organisation, priorités et deadlines.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">LocalStorage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Projet 6: Blog platform -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>Plateforme Blog</h3>
+                    <p class="project-description">Plateforme de blogging avec création d'articles, catégories, commentaires et gestion utilisateurs.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes Expériences</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Rédacteur Web</h3>
+                        <span class="timeline-date">2022 - Présent</span>
+                        <p>Création de contenus optimisés pour le SEO, rédaction d'articles de blog, 
+                           pages de destination et descriptions de produits. Utilisation des meilleures 
+                           pratiques de référencement naturel.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Assistant Virtuel</h3>
+                        <span class="timeline-date">2021 - 2022</span>
+                        <p>Gestion administrative à distance pour divers clients. Organisation d'agendas, 
+                           gestion des emails, préparation de documents et soutien opérationnel.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Service Client</h3>
+                        <span class="timeline-date">2020 - 2021</span>
+                        <p>Accueil et conseil clientèle, traitement des demandes et réclamations, 
+                           fidélisation des clients et maintien d'un haut niveau de satisfaction.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Développeur Web</h3>
+                        <span class="timeline-date">2019 - Présent</span>
+                        <p>Développement de sites web avec HTML, CSS et JavaScript. Création de 
+                           pages responsives, intégration de design et animation交互ive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Parlons de votre projet</h3>
+                    <p>Je suis disponible pour toute collaboration ou question. N'hésitez pas à me contacter.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>fenomananajoel@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+261 33 23 108 40</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Fianarantsoa</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
