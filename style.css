@@ -612,14 +612,30 @@ ul {
 /* Form Success Message */
 .form-success {
     background: rgba(108, 99, 255, 0.2);
-    color: var(--primary-color);
+    color: #00d9ff;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
     display: none;
+    margin-bottom: 20px;
 }
 
 .form-success.show {
+    display: block;
+}
+
+/* Form Error Message */
+.form-error {
+    background: rgba(255, 82, 82, 0.2);
+    color: #ff5252;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.form-error.show {
     display: block;
 }
 

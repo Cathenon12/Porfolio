@@ -123,10 +123,15 @@ function initScrollAnimations() {
 }
 
 // ========================================
-// Contact Form Handling
+// Contact Form Handling with EmailJS
 // ========================================
 function initContactForm() {
     const form = document.getElementById('contactForm');
+    
+    // Initialize EmailJS with your public key
+    (function() {
+        emailjs.init("tVMMYGShr-EGjyxCK");
+    })();
     
     if (form) {
         form.addEventListener('submit', function(e) {
@@ -136,11 +141,33 @@ function initContactForm() {
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries());
             
-            // Show success message (in a real app, you'd send this to a server)
-            showFormSuccess();
+            // Show sending message
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Envoi en cours...';
+            submitBtn.disabled = true;
             
-            // Reset form
-            this.reset();
+            // Send email using EmailJS
+            emailjs.send("service_2gt9lva", "template_9vrhm1i", {
+                from_name: data.name,
+                from_email: data.email,
+                subject: data.subject,
+                message: data.message
+            })
+            .then(function(response) {
+                // Show success message
+                showFormSuccess();
+                // Reset form
+                form.reset();
+            }, function(error) {
+                // Show error message
+                showFormError();
+            })
+            .finally(function() {
+                // Restore button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 }
@@ -158,6 +185,22 @@ function showFormSuccess() {
     // Remove after 5 seconds
     setTimeout(() => {
         successMessage.remove();
+    }, 5000);
+}
+
+function showFormError() {
+    // Create error message element
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'form-error show';
+    errorMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.';
+    
+    // Insert after the form
+    const form = document.getElementById('contactForm');
+    form.parentNode.insertBefore(errorMessage, form);
+    
+    // Remove after 5 seconds
+    setTimeout(() => {
+        errorMessage.remove();
     }, 5000);
 }
 
